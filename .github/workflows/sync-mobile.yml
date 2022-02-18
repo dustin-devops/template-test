@@ -1,0 +1,19 @@
+name: Sync with mobile branch
+on:
+  push:
+    branches: ['dev']
+    workflow_dispatch:
+jobs:
+  sync-branch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+
+      - name: Merge dev -> ionic-app-dev
+        uses: devmasx/merge-branch@master
+        with:
+          type: now
+          from_branch: dev
+          target_branch: ionic-app-dev
+          github_token: ${{ github.token }}
+
