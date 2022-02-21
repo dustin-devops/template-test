@@ -1,2 +1,2 @@
 # branch-protection-template
- this is a dev test
+ this is a sync test
