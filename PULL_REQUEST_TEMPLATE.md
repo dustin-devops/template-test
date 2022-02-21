@@ -3,8 +3,8 @@
 Please check if your PR fulfills the following requirements:
 - [ ] Tests for the changes have been added (for bug fixes / features)
 - [ ] Docs have been reviewed and added / updated if needed (for bug fixes / features)
-- [X] Build iOS (`yarn build:ios`) was run locally and any changes were pushed
-- [X] Build Android (`yarn build:android`) was run locally and any changes were pushed
+- [ ] Build iOS (`yarn build:ios`) was run locally and any changes were pushed
+- [ ] Build Android (`yarn build:android`) was run locally and any changes were pushed
 - [ ] Build Web (`ng build`) was run locally and any changes were pushed
 - [ ] Lint (`yarn lint`) has passed locally and any fixes were made for failures
 
@@ -17,7 +17,7 @@ Please check if your PR fulfills the following requirements:
 
 Please check the type of change your PR introduces:
 - [ ] Bugfix
-- [X] Feature
+- [ ] Feature
 - [ ] Code style update (formatting, renaming)
 - [ ] Refactoring (no functional changes, no api changes)
 - [ ] Build related changes
@@ -49,3 +49,4 @@ Please check the type of change your PR introduces:
 ## Other information
 
 <!-- Any other information that is important to this PR such as screenshots of how the component looks before and after the change. -->
+
