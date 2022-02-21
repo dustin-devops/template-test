@@ -1,14 +1,14 @@
 name: Sync with mobile branch
 on:
   push:
-    branches: ['dev']
+    branches: ['dev', 'staging']
     workflow_dispatch:
 jobs:
-  sync-branch:
+  sync-dev-branch:
     runs-on: ubuntu-latest
+    if: ${{ github.ref == 'refs/heads/dev' }}
     steps:
       - uses: actions/checkout@master
-
       - name: Merge dev -> ionic-app-dev
         uses: devmasx/merge-branch@master
         with:
@@ -16,4 +16,15 @@ jobs:
           from_branch: dev
           target_branch: ionic-app-dev
           github_token: ${{ github.token }}
-
+  sync-staging-branch:
+    runs-on: ubuntu-latest
+    if: ${{ github.ref == 'refs/heads/staging' }}
+    steps:
+      - uses: actions/checkout@master
+      - name: Merge staging -> ionic-app-release
+        uses: devmasx/merge-branch@master
+        with:
+          type: now
+          from_branch: staging
+          target_branch: ionic-app-release
+          github_token: ${{ github.token }}
